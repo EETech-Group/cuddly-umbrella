@@ -23,7 +23,7 @@ interface Part {
   quantity: number
   location?: string
   datasheet_url?: string
-  specifications?: any
+  specifications?: Record<string, unknown>
 }
 
 interface PartFormProps {
@@ -95,7 +95,7 @@ export function PartForm({ part, onClose, mode }: PartFormProps) {
     }
   }
 
-  const handleInputChange = (field: string, value: any) => {
+  const handleInputChange = (field: string, value: unknown) => {
     setFormData(prev => ({
       ...prev,
       [field]: value
