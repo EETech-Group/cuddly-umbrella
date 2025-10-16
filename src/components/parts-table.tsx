@@ -166,6 +166,7 @@ export function PartsTable({ onRefresh }: PartsTableProps) {
                         variant="outline"
                         size="sm"
                         onClick={() => handleEdit(part)}
+                        className="hover:bg-blue-50 hover:border-blue-200 hover:text-blue-600 transition-colors duration-200 cursor-pointer"
                       >
                         <Edit className="h-4 w-4" />
                       </Button>
@@ -173,6 +174,7 @@ export function PartsTable({ onRefresh }: PartsTableProps) {
                         variant="outline"
                         size="sm"
                         onClick={() => setDeletingPart(part)}
+                        className="hover:bg-red-50 hover:border-red-200 hover:text-red-600 transition-colors duration-200 cursor-pointer"
                       >
                         <Trash2 className="h-4 w-4" />
                       </Button>
