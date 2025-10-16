@@ -1,0 +1,26 @@
+# Cursor Rules
+
+this is a electronic part database editing web app
+
+## Tech Stack
+- **Framework**: Next.js 15.5.5 with App Router
+- **Language**: TypeScript
+- **Database**: PostgreSQL with Prisma ORM
+- **Styling**: Tailwind CSS v4
+- **UI Components**: Radix UI primitives
+- **Icons**: Lucide React
+
+## Key Libraries
+- `@prisma/client` - Database ORM
+- `@radix-ui/react-dialog` - Dialog components
+- `@radix-ui/react-slot` - Slot component
+- `class-variance-authority` - Component variants
+- `clsx` & `tailwind-merge` - Conditional styling
+- `lucide-react` - Icon library
+
+## Development
+- Uses Turbopack for faster builds
+- ESLint for code linting
+- TypeScript for type safety
+
+always document code properly and update the readme if the change would make sense to document for other developers to know about.

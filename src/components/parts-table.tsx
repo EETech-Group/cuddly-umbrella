@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { Button } from '@/components/ui/button'
 import {
   Table,
@@ -26,7 +26,7 @@ interface Part {
   quantity: number
   location?: string
   datasheet_url?: string
-  specifications?: any
+  specifications?: Record<string, unknown>
   created_at: string
   updated_at: string
 }
@@ -46,7 +46,7 @@ export function PartsTable({ onRefresh }: PartsTableProps) {
 
   const categories = ['resistor', 'capacitor', 'IC', 'LED', 'connector', 'transistor', 'diode', 'other']
 
-  const fetchParts = async () => {
+  const fetchParts = useCallback(async () => {
     try {
       setLoading(true)
       const params = new URLSearchParams()
@@ -61,11 +61,11 @@ export function PartsTable({ onRefresh }: PartsTableProps) {
     } finally {
       setLoading(false)
     }
-  }
+  }, [search, categoryFilter])
 
   useEffect(() => {
     fetchParts()
-  }, [search, categoryFilter])
+  }, [search, categoryFilter, fetchParts])
 
   const handleDelete = async (part: Part) => {
     try {

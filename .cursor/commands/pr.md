@@ -1,1 +1,1 @@
-Your job is to create a pull request with a descriptive title, always use the github cli. If you havent already made a commit, do that first.
+Your job is to create a pull request with a descriptive title, always use the github cli. If you havent already made a commit, do that first.  dont make anything up in the description.

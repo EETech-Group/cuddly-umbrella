@@ -7,7 +7,7 @@ export async function GET(request: NextRequest) {
     const search = searchParams.get('search')
     const category = searchParams.get('category')
 
-    const where: any = {}
+    const where: Record<string, unknown> = {}
     
     if (search) {
       where.OR = [
